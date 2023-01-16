@@ -14,8 +14,10 @@ def cloth_fitting(xmin, ymin, steps, las):
     point_coords = np.vstack((las.x, las.y, las.z)).transpose()
     point_tree = scipy.spatial.KDTree(point_coords[:, 0:2])
     dist, indices = point_tree.query(particle_tree.data)
-    lowest = -point_coords[indices][:,2]
-    breakpoint()
+    lowest = -point_coords[:, -1]
+    point_reversed = np.vstack((las.x, las.y, lowest)).transpose()
+    # breakpoint()
+    return point_reversed
 
 
 def main():
