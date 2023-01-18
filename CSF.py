@@ -54,17 +54,11 @@ def ground_filter(cloth, las, threshold):
     dist, indices = cloth_tree.query(point_coords[:, 0:2])
     standard_ = cloth[indices][:, 2]
     idx = np.where(np.abs(standard_ - las.z) <= threshold)[0]
-    ground_point = point_coords[idx]
-    header = copy(las.header)
-    header.point_count = 0
-    ground_las = laspy.LasData(header)
-    las.header.point_count = idx.shape[0]
-    ground_las.X = ground_point[:, 0]
-    ground_las.Y = ground_point[:, 1]
-    ground_las.Z = ground_point[:, 2]
-
+    # ground_point = point_coords[idx]
+    ground_point = las.points[idx]
+    ground_las = laspy.LasData(las.header)
+    ground_las.points = ground_point.copy()
     ground_las.write("ground_points.laz")
-    return ground_point
 
 
 def main():
@@ -77,8 +71,7 @@ def main():
     z_tolerance = 0.5
     las = laspy.read('roi.laz')
     cloth = cloth_fitting(steps, las, max_iter, tension, gravity, threshold)
-    ground_point = ground_filter(cloth, las, z_tolerance)
-    print("total ground points:", ground_point.shape[0])
+    ground_filter(cloth, las, z_tolerance)
 
 
 if __name__ == '__main__':
