@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecdcdd19-971f-4edf-8049-b3731089cbeb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSF.py" beforeDir="false" afterPath="$PROJECT_DIR$/CSF.py" afterDir="false" />
-    </list>
+    <list default="true" id="ecdcdd19-971f-4edf-8049-b3731089cbeb" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,6 +26,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "/Users/apple/Desktop/Q2/GEO1015 DTM/Assignment/Assignment_4/dtm_hw4",
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
