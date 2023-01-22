@@ -46,7 +46,7 @@ def main():
     raster = rasterio.open("./data/dtm/cloth_dtm.tif")
     isoline_extraction(raster, isoline_interval=2, filename="./data/isoline/cloth")
     point_dtm = rasterio.open("./data/dtm/ground_dtm.tif")
-    isoline_extraction(raster, isoline_interval=2, filename="./data/isoline/ground")
+    isoline_extraction(point_dtm, isoline_interval=2, filename="./data/isoline/ground")
 
 
 if __name__ == '__main__':

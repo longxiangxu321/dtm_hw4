@@ -3,8 +3,8 @@ import numpy as np
 
 
 def main():
-    xmin = 191952.41724297937
-    ymin = 325068.92101974826
+    xmin = 191952.00
+    ymin = 325070.00
 
     with laspy.open("./data/pointcloud/C_68GZ1.LAZ") as f:
         with laspy.open("./data/pointcloud/roi.laz", mode="w", header=f.header) as writer:

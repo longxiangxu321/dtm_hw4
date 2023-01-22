@@ -1,7 +1,9 @@
 import laspy
 import numpy as np
 import rasterio
+import scipy
 import startinpy
+from rasterio.transform import Affine
 
 
 def generate_dtm(las, resolution, output_name):
@@ -23,6 +25,18 @@ def generate_dtm(las, resolution, output_name):
     x, y = np.meshgrid(grid_x, grid_y)
     new_grid = np.c_[x.ravel(), y.ravel()]
     z = []
+    # for i in range(new_grid.shape[0]):
+    #     ptx = new_grid[i][0]
+    #     pty = new_grid[i][1]
+    #     if dt.is_inside_convex_hull(ptx, pty):
+    #         ptz = dt.interpolate_laplace(ptx, pty)
+    #         z.append(ptz)
+    #     else:
+    #         z.append(np.nan)
+
+    # uncomment above if want to denote outside convexhull points as np.nodatavals
+    # use below code if want to denote outside convexhull points to its neighbour values
+    point_tree = scipy.spatial.KDTree(las_pts[:, 0:2])
     for i in range(new_grid.shape[0]):
         ptx = new_grid[i][0]
         pty = new_grid[i][1]
@@ -30,10 +44,13 @@ def generate_dtm(las, resolution, output_name):
             ptz = dt.interpolate_laplace(ptx, pty)
             z.append(ptz)
         else:
-            z.append(np.nan)
+            p = np.array([ptx, pty])
+            dist, index = point_tree.query(p)
+            r_z = las_pts[index][2]
+            z.append(r_z)
     z_ = np.array(z).reshape(-1, 1)
     dtm = np.reshape(z_, (steps_x, steps_y))
-    transform = rasterio.transform.from_origin(west=ll_x, north=ur_y, xsize=resolution, ysize=resolution)
+    transform = Affine.translation(grid_x[0], grid_y[0]) * Affine.scale(0.5, 0.5)
     new_dataset = rasterio.open(
         output_name,
         'w',
