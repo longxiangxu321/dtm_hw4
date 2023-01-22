@@ -11,7 +11,6 @@ def crop(pdok_file):
 
         window = Window(xoff, yoff, xsize, ysize)
         transform = gz.window_transform(window)
-        # transform = Affine.translation(191952.0, 325070.0) * Affine.scale(0.5, 0.5)
 
         profile = gz.profile
         profile.update({
@@ -20,26 +19,24 @@ def crop(pdok_file):
             'transform': transform
         })
 
-        with rasterio.open('roi_dtm.tif', 'w', **profile) as dst:
+        with rasterio.open('./data/dtm/roi_dtm.tif', 'w', **profile) as dst:
             dst.write(gz.read(window=window))
 
 
-def compare_dtm(dtm1, dtm2):
+def compare_dtm(dtm1, dtm2, dtm2flip=False):
     dtm1_tif = rasterio.open(dtm1)
     dtm2_tif = rasterio.open(dtm2)
     dtm1_h = dtm1_tif.read(1)
-    if dtm2 == 'roi_dtm.tif':
+    if dtm2flip:
         # origin at the upper left, it should be flipped to do matrix subtraction
-        dtm2_h = np.flipud(dtm2_tif.read(1))
+        dtm2_h = np.flip(dtm2_tif.read(1), axis=0)
     else:
         dtm2_h = dtm2_tif.read(1)
-
     difference_h = np.where(dtm2_h == dtm2_tif.nodatavals, np.nan, abs(dtm1_h - dtm2_h))
-    breakpoint()
     difference_h_rmse = np.where(dtm2_h == dtm2_tif.nodatavals, 0, (dtm1_h - dtm2_h) ** 2)
-    # breakpoint()
+
     # if compared to roi_dtm.tif, calculate RMSE
-    if dtm2 == 'roi_dtm.tif':
+    if dtm2flip:
         RMSE = round(np.sum(difference_h_rmse) / dtm2_h.size, 4)
         print('The RMSE value of {0} and {1} is: {2}.'.format(dtm1, dtm2, RMSE))
     else:
@@ -56,9 +53,10 @@ def compare_dtm(dtm1, dtm2):
 
 
 def main():
+    # crop(pdok_file)
     compare_dtm('./data/dtm/cloth_dtm.tif', './data/dtm/ground_dtm.tif')
     compare_dtm('./data/dtm/cloth_dtm.tif', './data/dtm/roi_dtm.tif')
-    compare_dtm('./data/dtm/ground_dtm.tif', './data/dtm/roi_dtm.tif')
+    compare_dtm('./data/dtm/ground_dtm.tif', './data/dtm/roi_dtm.tif', dtm2flip=True)
 
 
 if __name__ == '__main__':

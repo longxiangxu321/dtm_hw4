@@ -19,7 +19,6 @@ def generate_dtm(las, resolution, output_name):
 
     steps_x = int(width / resolution)
     steps_y = int(height / resolution)
-
     grid_x = np.linspace(ll_x, ur_x, steps_x)
     grid_y = np.linspace(ll_y, ur_y, steps_y)
     x, y = np.meshgrid(grid_x, grid_y)
@@ -34,8 +33,8 @@ def generate_dtm(las, resolution, output_name):
     #     else:
     #         z.append(np.nan)
 
-    # uncomment above if want to denote outside convexhull points as np.nodatavals
-    # use below code if want to denote outside convexhull points to its neighbour values
+    # use above code if you want to denote outside convexhull points as np.nodatavals
+    # use below code if you want to denote outside convexhull points to its neighbour values
     point_tree = scipy.spatial.KDTree(las_pts[:, 0:2])
     for i in range(new_grid.shape[0]):
         ptx = new_grid[i][0]

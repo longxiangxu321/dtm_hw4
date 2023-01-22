@@ -23,7 +23,7 @@ def cloth_fitting(resolution, las, max_iter, tension, gravity, threshold):
     lowest_ = -point_coords[indices][:, 2]
     start_z = max(lowest_)
     lowest_2d = np.reshape(lowest_, (steps_x, steps_y))
-    start_particles = np.full((steps_x, steps_y), start_z) + 1
+    start_particles = np.full((steps_x, steps_y), start_z) + 0.3
     threshold = np.full((steps_x, steps_y), threshold)
     for i in range(max_iter):
         internal = internal_force(start_particles, tension)
