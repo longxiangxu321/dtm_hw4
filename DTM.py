@@ -33,17 +33,17 @@ def generate_dtm(las, resolution, output_name):
             z.append(np.nan)
     z_ = np.array(z).reshape(-1, 1)
     dtm = np.reshape(z_, (steps_x, steps_y))
-    # dtm[dtm == -9999] = np.nan
-    transform = rasterio.transform.from_origin(west=ll_x, north=ur_y, xsize=steps_x, ysize=steps_y)
+    transform = rasterio.transform.from_origin(west=ll_x, north=ur_y, xsize=resolution, ysize=resolution)
     new_dataset = rasterio.open(
         output_name,
         'w',
         driver='GTiff',
-        height=height,
-        width=width,
+        height=dtm.shape[0],
+        width=dtm.shape[1],
         count=1,
         dtype=dtm.dtype,
-        transform=transform, )
+        transform=transform,
+    )
     new_dataset.write(dtm, 1)
 
 
@@ -51,7 +51,7 @@ def main():
     cloth = laspy.read("cloth_points.laz")
     ground = laspy.read("ground_points.laz")
     resolution = 0.5
-    # generate_dtm(cloth, resolution=resolution, output_name="cloth_dtm.tif")
+    generate_dtm(cloth, resolution=resolution, output_name="cloth_dtm.tif")
     generate_dtm(ground, resolution=resolution, output_name="ground_dtm.tif")
 
 
