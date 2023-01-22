@@ -16,10 +16,10 @@ def cloth_fitting(resolution, las, max_iter, tension, gravity, threshold):
     grid_x = np.linspace(xmin, xmax, steps_x)
     grid_y = np.linspace(ymin, ymax, steps_y)
     x, y = np.meshgrid(grid_x, grid_y)
-    particle_tree = scipy.spatial.KDTree(np.c_[x.ravel(), y.ravel()])
+    particle_data = np.c_[x.ravel(), y.ravel()]
     point_coords = np.vstack((las.x, las.y, las.z)).transpose()
     point_tree = scipy.spatial.KDTree(point_coords[:, 0:2])
-    dist, indices = point_tree.query(particle_tree.data)
+    dist, indices = point_tree.query(particle_data)
     lowest_ = -point_coords[indices][:, 2]
     start_z = max(lowest_)
     lowest_2d = np.reshape(lowest_, (steps_x, steps_y))
@@ -35,14 +35,14 @@ def cloth_fitting(resolution, las, max_iter, tension, gravity, threshold):
     particles = start_particles.ravel()
     particles_ = np.reshape(particles.ravel(), (-1, 1))
     particles_ = - particles_
-    cloth = np.concatenate((particle_tree.data, particles_), axis=1)
+    cloth = np.concatenate((particle_data, particles_), axis=1)
     header = las.header
     header.point_count = 0
     cloth_las = laspy.LasData(las.header)
     cloth_las.x = cloth[:, 0]
     cloth_las.y = cloth[:, 1]
     cloth_las.z = cloth[:, 2]
-    cloth_las.write("cloth_points.laz")
+    cloth_las.write("./data/pointcloud/cloth_points.laz")
     return cloth
 
 
@@ -75,8 +75,8 @@ def ground_filter(cloth, las, threshold):
     ground_las.points = ground_point.copy()
     non_ground_las.points = non_ground_point.copy()
 
-    ground_las.write("ground_points.laz")
-    non_ground_las.write("non_ground_points.laz")
+    ground_las.write("./data/pointcloud/ground_points.laz")
+    non_ground_las.write("./data/pointcloud/non_ground_points.laz")
 
 
 def main():
@@ -86,7 +86,7 @@ def main():
     max_iter = 500
     threshold = 0.1
     z_tolerance = 0.3
-    las = laspy.read('roi.laz')
+    las = laspy.read('./data/pointcloud/roi.laz')
     cloth = cloth_fitting(resolution, las, max_iter, tension, gravity, threshold)
     ground_filter(cloth, las, z_tolerance)
 

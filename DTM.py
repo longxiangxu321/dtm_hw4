@@ -48,11 +48,11 @@ def generate_dtm(las, resolution, output_name):
 
 
 def main():
-    cloth = laspy.read("cloth_points.laz")
-    ground = laspy.read("ground_points.laz")
+    cloth = laspy.read("./data/pointcloud/cloth_points.laz")
+    ground = laspy.read("./data/pointcloud/ground_points.laz")
     resolution = 0.5
-    generate_dtm(cloth, resolution=resolution, output_name="cloth_dtm.tif")
-    generate_dtm(ground, resolution=resolution, output_name="ground_dtm.tif")
+    generate_dtm(cloth, resolution=resolution, output_name="./data/dtm/cloth_dtm.tif")
+    generate_dtm(ground, resolution=resolution, output_name="./data/dtm/ground_dtm.tif")
 
 
 if __name__ == '__main__':

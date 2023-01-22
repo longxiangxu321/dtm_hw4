@@ -6,8 +6,8 @@ def main():
     xmin = 191952.41724297937
     ymin = 325068.92101974826
 
-    with laspy.open("C_68GZ1.LAZ") as f:
-        with laspy.open("roi.laz", mode="w", header=f.header) as writer:
+    with laspy.open("./data/pointcloud/C_68GZ1.LAZ") as f:
+        with laspy.open("./data/pointcloud/roi.laz", mode="w", header=f.header) as writer:
             for points in f.chunk_iterator(50000000):
                 X_in_valid = (xmin <= points.x) & (xmin + 500 >= points.x)
                 Y_in_valid = (ymin <= points.y) & (ymin + 500 >= points.y)
