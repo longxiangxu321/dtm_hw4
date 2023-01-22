@@ -2,6 +2,7 @@ import numpy as np
 import rasterio
 import matplotlib.pyplot as plt
 from rasterio.windows import Window
+import os
 
 
 def crop(pdok_file):
@@ -34,16 +35,19 @@ def compare_dtm(dtm1, dtm2, dtm2flip=False):
         dtm2_h = dtm2_tif.read(1)
     difference_h = np.where(dtm2_h == dtm2_tif.nodatavals, np.nan, abs(dtm1_h - dtm2_h))
     difference_h_rmse = np.where(dtm2_h == dtm2_tif.nodatavals, 0, (dtm1_h - dtm2_h) ** 2)
-
+    name1 = os.path.basename(dtm1)
+    name2 = os.path.basename(dtm2)
+    name1 = os.path.splitext(name1)[0]
+    name2 = os.path.splitext(name2)[0]
     # if compared to roi_dtm.tif, calculate RMSE
     if dtm2flip:
         RMSE = round(np.sum(difference_h_rmse) / dtm2_h.size, 4)
-        print('The RMSE value of {0} and {1} is: {2}.'.format(dtm1, dtm2, RMSE))
+        print('The RMSE value of {0} and {1} is: {2}.'.format(name1, name2, RMSE))
     else:
         pass
 
     # plotting the difference in raster
-    file_name = 'Difference in height \n {} & {} comparison'.format(dtm1, dtm2)
+    file_name = 'Difference in height \n {} & {} comparison'.format(name1, name2)
     plt.imshow(difference_h, origin='lower', cmap='viridis')
     plt.colorbar().ax.set_title('m', size=8)
     plt.title(file_name)
