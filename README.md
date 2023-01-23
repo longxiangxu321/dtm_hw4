@@ -24,8 +24,8 @@ Required packages:
 - startinpy 0.9.2
 
 ## Folder Structure
-hw4
 ```
+hw4
 ├─ compare.py  
 ├─ crop.py  
 ├─ csf.py  
