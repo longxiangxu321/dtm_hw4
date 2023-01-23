@@ -43,11 +43,10 @@ def compare_dtm(dtm1, dtm2, dtm1flip=False, dtm2flip=False):
     name1 = os.path.splitext(name1)[0]
     name2 = os.path.splitext(name2)[0]
     # if compared to roi_dtm.tif, calculate RMSE
-    if True:
-        RMSE = round(np.sum(difference_h_rmse) / dtm2_h.size, 4)
-        print('The RMSE value of {0} and {1} is: {2}.'.format(name1, name2, RMSE))
-    else:
-        pass
+
+    RMSE = round(np.sum(difference_h_rmse) / dtm2_h.size, 4)
+    print('The RMSE value of {0} and {1} is: {2}.'.format(name1, name2, RMSE))
+
 
     # plotting the difference in raster
     file_name = 'Difference in height \n {} & {} comparison'.format(name1, name2)

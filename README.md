@@ -74,7 +74,8 @@ Original data can be down loadded from PDOK  <https://download.pdok.nl/rws/ahn3/
 This program crop a subset of the original point cloud using chunked reading.   
 
 
-Change the 'xmin', 'ymin', and 'width', 'height' according to your desired bounding box.    
+Change the `xmin`, `ymin`, and `width`, `height`， `num_of_points` per iteration according to your desired bounding   
+box and computer memory.    
 In our case, the settings are:
 ```
     xmin = 191952.00
@@ -101,13 +102,13 @@ In our case, the following values were used.
 ## dtm.py
 This program generate raster DTM according to the input point cloud.  
 
-The `resolution of desired output can be specified`.
+The `resolution` of desired output can be specified.
 
 ## thining.py
 This program generate thinned point cloud using random thining and nth_point thinning.  
 
   
-The sampling percentage can be specified from 0 to 100.
+The sampling `percentage` can be specified from 0 to 100.
 
 ## compare.py
 This program compare the difference of two raster DTM, output heat map and RMSE.  
