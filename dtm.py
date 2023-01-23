@@ -11,8 +11,8 @@ def generate_dtm(las, resolution, output_name):
     ll_y = min(las.y)
     ur_x = max(las.x)
     ur_y = max(las.y)
-    height = ur_y - ll_y
-    width = ur_x - ll_x
+    height = round(ur_y - ll_y, 0)
+    width = round(ur_x - ll_x, 0)
     las_pts = np.vstack((las.x, las.y, las.z)).transpose()
     dt = startinpy.DT()
     dt.insert(las_pts)
