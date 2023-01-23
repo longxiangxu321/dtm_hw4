@@ -25,27 +25,27 @@ Required packages:
 
 ## Folder Structure
 hw4
-├─ compare.py
-├─ crop.py
-├─ csf.py
-├─ data
-│    ├─ dtm
-│    │    ├─ cloth_dtm.tif
-│    │    ├─ ground_dtm.tif
-│    │    ├─ roi_dtm.tif
-│    │    └─ roi_dtm.tif.aux.xml
-│    ├─ isoline
-│    │    ├─ cloth_isoline.wkt
-│    │    └─ ground_isoline.wkt
-│    └─ pointcloud
-│           ├─ cloth_points.laz
-│           ├─ ground_points.laz
-│           ├─ non_ground_points.laz
-│           ├─ nth_thinned_10%.laz
-│           ├─ nth_thinned_50%.laz
-│           ├─ random_thinned_10%.laz
-│           ├─ random_thinned_50%.laz
+├─ compare.py  
+├─ crop.py  
+├─ csf.py  
+├─ data  
+│    ├─ dtm  
+│    │    ├─ cloth_dtm.tif  
+│    │    ├─ ground_dtm.tif  
+│    │    ├─ roi_dtm.tif  
+│    │    └─ roi_dtm.tif.aux.xml  
+│    ├─ isoline  
+│    │    ├─ cloth_isoline.wkt  
+│    │    └─ ground_isoline.wkt  
+│    └─ pointcloud  
+│           ├─ cloth_points.laz  
+│           ├─ ground_points.laz   
+│           ├─ non_ground_points.laz  
+│           ├─ nth_thinned_10%.laz  
+│           ├─ nth_thinned_50%.laz  
+│           ├─ random_thinned_10%.laz  
+│           ├─ random_thinned_50%.laz  
 │           └─ roi.laz
-├─ dtm.py
-├─ isoline.py
-└─ thinning.py
+├─ dtm.py  
+├─ isoline.py  
+└─ thinning.py  
