@@ -1,4 +1,14 @@
-- [Introduction](#introduction)
+# Introduction
+This homework is about **Point Cloud Processing**. It includes
+- **Cropping a large point cloud data**
+- **A simple implementation of Cloth Simulation Filter**    
+        <https://www.mdpi.com/2072-4292/8/6/501/htm?ref=https://githubhelp.com>
+- **Generating Digital Terrain Model(DTM) based on ground points**
+- **Comparison of two DTM**
+- **Extracting isolines**
+
+
+# Table of Content
 - [Team Member](#team-member)
 - [Requirements](#requirements)
 - [Folder Structure](#folder-structure)
@@ -11,15 +21,6 @@
   * [compare.py](#comparepy)
   * [isoline.py](#isolinepy)
 
-
-# Introduction
-This homework is about **Point Cloud Processing**. It includes
-- **Cropping a large point cloud data**
-- **A simple implementation of Cloth Simulation Filter**    
-        <https://www.mdpi.com/2072-4292/8/6/501/htm?ref=https://githubhelp.com>
-- **Generating Digital Terrain Model(DTM) based on ground points**
-- **Comparison of two DTM**
-- **Extracting isolines**
 
 # Team Member
 - *Bingshiuan Tsai*
