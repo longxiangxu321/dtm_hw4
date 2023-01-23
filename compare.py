@@ -50,7 +50,7 @@ def compare_dtm(dtm1, dtm2, dtm1flip=False, dtm2flip=False):
 
     # plotting the difference in raster
     file_name = 'Difference in height \n {} & {} comparison'.format(name1, name2)
-    plt.imshow(difference_h, origin='lower', cmap='viridis')
+    plt.imshow(difference_h, origin='lower', cmap='Spectral_r', vmin=0, vmax=6)
     plt.colorbar().ax.set_title('m', size=8)
     plt.title(file_name)
     plt.xlabel('col')
