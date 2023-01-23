@@ -1,4 +1,20 @@
 # DTM Homework 4
+- [DTM Homework 4](#dtm-homework-4)
+  * [Introduction](#introduction)
+  * [Team Member](#team-member)
+  * [Requirements](#requirements)
+  * [Folder Structure](#folder-structure)
+  * [Run and Configuration](#run-and-configuration)
+    + [Data](#data)
+    + [crop.py](#croppy)
+    + [csf.py](#csfpy)
+    + [dtm.py](#dtmpy)
+    + [thining.py](#thiningpy)
+    + [compare.py](#comparepy)
+    + [isoline.py](#isolinepy)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 ## Introduction
 This homework is about **Point Cloud Processing**. It includes
 - **Cropping a large point cloud data**
