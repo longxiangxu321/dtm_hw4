@@ -25,6 +25,7 @@ Required packages:
 
 ## Folder Structure
 hw4
+```
 ├─ compare.py  
 ├─ crop.py  
 ├─ csf.py  
@@ -49,3 +50,4 @@ hw4
 ├─ dtm.py  
 ├─ isoline.py  
 └─ thinning.py  
+```
