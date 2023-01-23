@@ -114,6 +114,7 @@ This program compare the difference of two raster DTM, output heat map and RMSE.
 If the second input of `compare_dtm` is downloaded from AHN, the parameter 'dtm2flip=' needs to be set to `True`.
 
 ## isoline.py
-This program extract isolines from input raster DTM.     
+This program extract isolines from input raster DTM.
+  
 The `isoline_interval` can be determined by the user.
 
