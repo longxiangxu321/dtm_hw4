@@ -74,7 +74,7 @@ Original data can be down loadded from PDOK  <https://download.pdok.nl/rws/ahn3/
 This program crop a subset of the original point cloud using chunked reading.   
 
 
-Change the 'xmin', 'ymin', and 'width', 'height' according to your desired bounding box.    
+Change the `xmin`, `ymin`, `width`, `height`, and `num_of_points` per iteration according to your desired bounding box and computer memory.    
 In our case, the settings are:
 ```
     xmin = 191952.00
