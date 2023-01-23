@@ -13,8 +13,6 @@
     + [compare.py](#comparepy)
     + [isoline.py](#isolinepy)
 
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
-
 ## Introduction
 This homework is about **Point Cloud Processing**. It includes
 - **Cropping a large point cloud data**
