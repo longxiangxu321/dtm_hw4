@@ -28,7 +28,7 @@ This homework is about **Point Cloud Processing**. It includes
 - *Longxiang Xu*
 
 # Requirements
-The code has been tested with Python 3.8.
+The code has been tested with Python 3.8.   
 Required packages:
 - laspy 2.3.0
 - matplotlib 3.5.3
@@ -71,7 +71,9 @@ hw4
 Original data can be down loadded from PDOK  <https://download.pdok.nl/rws/ahn3/v1_0/laz/C_68GZ1.LAZ>
 
 ## crop.py
-This program crop a subset of the original point cloud using chunked reading   
+This program crop a subset of the original point cloud using chunked reading.   
+
+
 Change the 'xmin', 'ymin', and 'width', 'height' according to your desired bounding box.    
 In our case, the settings are:
 ```
@@ -82,7 +84,9 @@ In our case, the settings are:
 ```
 
 ## csf.py
-This program applys a cloth simulation filtering on the point cloud to obtain ground points  
+This program applys a cloth simulation filtering on the point cloud to obtain ground points. 
+
+
 Modify the parameters below according to your test on your data.   
 In our case, the following values were used.
 ```
@@ -95,18 +99,21 @@ In our case, the following values were used.
 ```
 
 ## dtm.py
-This program generate raster DTM according to the input point cloud   
+This program generate raster DTM according to the input point cloud.  
+
 The `resolution of desired output can be specified`.
 
 ## thining.py
-This program generate thinned point cloud using random thining and nth_point thinning   
+This program generate thinned point cloud using random thining and nth_point thinning.
+  
 The sampling percentage can be specified from 0 to 100.
 
 ## compare.py
-This program compare the difference of two raster DTM, output heat map and RMSE  
+This program compare the difference of two raster DTM, output heat map and RMSE.
+  
 If the second input of `compare_dtm` is downloaded from AHN, the parameter 'dtm2flip=' needs to be set to `True`.
 
 ## isoline.py
-This program extract isolines from input raster DTM   
+This program extract isolines from input raster DTM.     
 The `isoline_interval` can be determined by the user.
 
