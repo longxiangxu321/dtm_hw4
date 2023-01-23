@@ -81,6 +81,7 @@ In our case, the settings are:
     ymin = 325070.00
     width = 500
     height = 500
+    num_of_points = 50000000
 ```
 
 ## csf.py
