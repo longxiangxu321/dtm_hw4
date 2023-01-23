@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b28e919b-fe4f-4395-84f1-60f05fa71d33" name="Changes" comment="edit readme">
+      <change beforePath="$PROJECT_DIR$/compare.py" beforeDir="false" afterPath="$PROJECT_DIR$/compare.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/dtm/roi_dtm.tif.aux.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/pointcloud/cloth_points.laz" beforeDir="false" afterPath="$PROJECT_DIR$/data/pointcloud/cloth_points.laz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/pointcloud/ground_points.laz" beforeDir="false" afterPath="$PROJECT_DIR$/data/pointcloud/ground_points.laz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/pointcloud/non_ground_points.laz" beforeDir="false" afterPath="$PROJECT_DIR$/data/pointcloud/non_ground_points.laz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/pointcloud/nth_thinned_10%.laz" beforeDir="false" afterPath="$PROJECT_DIR$/data/pointcloud/nth_thinned_10%.laz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/pointcloud/nth_thinned_50%.laz" beforeDir="false" afterPath="$PROJECT_DIR$/data/pointcloud/nth_thinned_50%.laz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/pointcloud/random_thinned_10%.laz" beforeDir="false" afterPath="$PROJECT_DIR$/data/pointcloud/random_thinned_10%.laz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/pointcloud/random_thinned_50%.laz" beforeDir="false" afterPath="$PROJECT_DIR$/data/pointcloud/random_thinned_50%.laz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dtm.py" beforeDir="false" afterPath="$PROJECT_DIR$/dtm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/isoline.py" beforeDir="false" afterPath="$PROJECT_DIR$/isoline.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thinning.py" beforeDir="false" afterPath="$PROJECT_DIR$/thinning.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2KgT5scxDVVrSWxts8xlm520A2h" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Q2/DTM/hw4&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b28e919b-fe4f-4395-84f1-60f05fa71d33" name="Changes" comment="" />
+      <created>1674395045754</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1674395045754</updated>
+      <workItem from="1674395230869" duration="15000" />
+    </task>
+    <task id="LOCAL-00001" summary="improve plot">
+      <created>1674426442106</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1674426442106</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add configuration">
+      <created>1674434028986</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1674434028986</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add more configuration">
+      <created>1674435913785</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1674435913785</updated>
+    </task>
+    <task id="LOCAL-00004" summary="add more configuration">
+      <created>1674435942065</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1674435942065</updated>
+    </task>
+    <task id="LOCAL-00005" summary="edit readme">
+      <created>1674438768868</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1674438768868</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="improve plot" />
+    <MESSAGE value="add configuration" />
+    <MESSAGE value="add more configuration" />
+    <MESSAGE value="edit readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit readme" />
+  </component>
+</project>
