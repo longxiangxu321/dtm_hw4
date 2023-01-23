@@ -51,3 +51,29 @@ hw4
 ├─ isoline.py  
 └─ thinning.py  
 ```
+
+## Run and Configuration
+### Data
+Original data can be down loadded from <https://download.pdok.nl/rws/ahn3/v1_0/laz/C_68GZ1.LAZ>
+
+### crop.py
+Change the 'xmin', 'ymin', and 'width', 'height' according to your desired bounding box.  
+In our case, the settings are:
+```
+    xmin = 191952.00
+    ymin = 325070.00
+    width = 500
+    height = 500
+```
+
+### csf.py
+Change the settings below according to your test on your data.  
+In our case, the following values were used.
+```
+    resolution = 4 # grid size of the cloth
+    tension = 0.5 
+    gravity = 0.3
+    max_iter = 500
+    threshold = 0.1 # non-movable threshold force
+    z_tolerance = 0.3 # off ground tolerance
+```
