@@ -1,17 +1,16 @@
-# DTM Homework 4
-- [DTM Homework 4](#dtm-homework-4)
-  * [Introduction](#introduction)
-  * [Team Member](#team-member)
-  * [Requirements](#requirements)
-  * [Folder Structure](#folder-structure)
-  * [Run and Configuration](#run-and-configuration)
-    + [Data](#data)
-    + [crop.py](#croppy)
-    + [csf.py](#csfpy)
-    + [dtm.py](#dtmpy)
-    + [thining.py](#thiningpy)
-    + [compare.py](#comparepy)
-    + [isoline.py](#isolinepy)
+- [Introduction](#introduction)
+- [Team Member](#team-member)
+- [Requirements](#requirements)
+- [Folder Structure](#folder-structure)
+- [Run and Configuration](#run-and-configuration)
+  * [Data](#data)
+  * [crop.py](#croppy)
+  * [csf.py](#csfpy)
+  * [dtm.py](#dtmpy)
+  * [thining.py](#thiningpy)
+  * [compare.py](#comparepy)
+  * [isoline.py](#isolinepy)
+
 
 # Introduction
 This homework is about **Point Cloud Processing**. It includes
